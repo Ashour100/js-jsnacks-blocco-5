@@ -167,9 +167,46 @@
  */
 
 
-    const Stringhe=['pippo', 'PLUTO', 'Paperino'];
-    const stringheFormattati= Stringhe.map((parola)=>{
-        return parola.charAt(0).toUpperCase()+parola.substring(1).toLowerCase();
-    })
-    console.table(Stringhe);
-    console.table(stringheFormattati);
+    // const Stringhe=['pippo', 'PLUTO', 'Paperino'];
+    // const stringheFormattati= Stringhe.map((parola)=>{
+    //     return parola.charAt(0).toUpperCase()+parola.substring(1).toLowerCase();
+    // })
+    // console.table(Stringhe);
+    // console.table(stringheFormattati);
+
+
+
+// ----------------------------------------------------------------------------------------------------------------------------
+/**
+ * 
+ * 
+    Crea un array di oggetti che rappresentano degli animali.
+    Ogni animale ha un nome, una famiglia e una classe.
+    Es:
+
+    [
+        { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
+        { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
+        { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
+    ]
+
+    Crea un nuovo array con la lista dei mammiferi.
+
+ * 
+ */
+
+
+const animali=[
+    { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
+    { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
+    { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
+];
+
+
+const iMammiferi=animali.filter((animale)=>{
+    if(animale.classe=='mammiferi')
+        return true;
+    return false;
+})
+
+console.log(iMammiferi);
