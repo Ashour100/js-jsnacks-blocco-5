@@ -196,17 +196,81 @@
  */
 
 
-const animali=[
-    { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
-    { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
-    { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
-];
+// const animali=[
+//     { nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
+//     { nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
+//     { nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
+// ];
 
 
-const iMammiferi=animali.filter((animale)=>{
-    if(animale.classe=='mammiferi')
-        return true;
-    return false;
-})
+// const iMammiferi=animali.filter((animale)=>{
+//     if(animale.classe=='mammiferi')
+//         return true;
+//     return false;
+// })
 
-console.log(iMammiferi);
+// console.log(iMammiferi);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ *
+    Crea un array di oggetti che rappresentino delle persone.
+    Ogni persona ha un nome, un cognome e un'età.
+    
+    Crea quindi un nuovo array inserendo, per ogni persona, una frase con il nome e cognome e l'indicazione se può guidare, in base all'età.
+ */
+
+
+    let persone=[
+        {
+            nome:"Rosalia",
+            cognome:"Cardano",
+            "età":"35"
+        },
+        {
+            nome:"Gianluigi",
+            cognome:"Traversa",
+            "età":"20"
+        },
+        {
+            nome:"Tatiana",
+            cognome:"Curiel",
+            "età":"17"
+        },
+        {
+            nome:"Damiano",
+            cognome:"Golgi",
+            "età":"18"
+        },
+        {
+            nome:"Letizia",
+            cognome:"Travaglia",
+            "età":"25"
+        }
+    ];
+    let nuovoArr=[];
+    persone.forEach((persona)=>{
+        let frase;
+        if(persona['età']>=18)
+            frase=persona.nome+" "+persona.cognome+" puoi guidare";
+        else
+            frase=persona.nome+" "+persona.cognome+" non puoi guidare";
+        nuovoArr.push(frase);
+    })
+    console.log(nuovoArr)
