@@ -70,86 +70,106 @@
  *
  */
 
-const automobili=[
-    {
-        marca:"HONDA",
-        modello:"NSR50",
-        alimentazione:"benzina"
-    },
-    {
-        marca:"NISSAN",
-        modello:"NP300",
-        alimentazione:"diesel"
-    },
-    {
-        marca:"Tm",
-        modello:"MX250F",
-        alimentazione:"benzina"
-    },
-    {
-        marca:"POLARIS",
-        modello:"XPEDITION 425",
-        alimentazione:"diesel"
-    },
-    {
-        marca:"SEA-DOO",
-        modello:"GTX 4-TEC WAKE",
-        alimentazione:"gpl"
-    },
-    {
-        marca:"KIA",
-        modello:"OPTIMA",
-        alimentazione:"benzina"
-    },
-    {
-        marca:"CHEVROLET",
-        modello:"TRAVERSE",
-        alimentazione:"diesel"
-    },
-    {
-        marca:"MERCURY",
-        modello:"VILLAGER",
-        alimentazione:"benzina"
-    },
-    {
-        marca:"HONDA",
-        modello:"VT1300CRA STATELINE ABS",
-        alimentazione:"benzina"
-    },
-    {
-        marca:"KTM",
-        modello:"450SX",
-        alimentazione:"metano"
-    },
-    {
-        marca:"FORD",
-        modello:"LOBO",
-        alimentazione:"elettrico"
-    },
-    {
-        marca:"BMW",
-        modello:"R1150RT",
-        alimentazione:"benzina"
-    }
-];
+// const automobili=[
+//     {
+//         marca:"HONDA",
+//         modello:"NSR50",
+//         alimentazione:"benzina"
+//     },
+//     {
+//         marca:"NISSAN",
+//         modello:"NP300",
+//         alimentazione:"diesel"
+//     },
+//     {
+//         marca:"Tm",
+//         modello:"MX250F",
+//         alimentazione:"benzina"
+//     },
+//     {
+//         marca:"POLARIS",
+//         modello:"XPEDITION 425",
+//         alimentazione:"diesel"
+//     },
+//     {
+//         marca:"SEA-DOO",
+//         modello:"GTX 4-TEC WAKE",
+//         alimentazione:"gpl"
+//     },
+//     {
+//         marca:"KIA",
+//         modello:"OPTIMA",
+//         alimentazione:"benzina"
+//     },
+//     {
+//         marca:"CHEVROLET",
+//         modello:"TRAVERSE",
+//         alimentazione:"diesel"
+//     },
+//     {
+//         marca:"MERCURY",
+//         modello:"VILLAGER",
+//         alimentazione:"benzina"
+//     },
+//     {
+//         marca:"HONDA",
+//         modello:"VT1300CRA STATELINE ABS",
+//         alimentazione:"benzina"
+//     },
+//     {
+//         marca:"KTM",
+//         modello:"450SX",
+//         alimentazione:"metano"
+//     },
+//     {
+//         marca:"FORD",
+//         modello:"LOBO",
+//         alimentazione:"elettrico"
+//     },
+//     {
+//         marca:"BMW",
+//         modello:"R1150RT",
+//         alimentazione:"benzina"
+//     }
+// ];
 
 
-    let mABenzina= automobili.filter((Macchina)=>{
-        if(Macchina.alimentazione=="benzina")
-            return true;
-        return false;
-    });
-    let mADiesel= automobili.filter((Macchina)=>{
-        if(Macchina.alimentazione=="diesel")
-            return true;
-        return false;
+//     let mABenzina= automobili.filter((Macchina)=>{
+//         if(Macchina.alimentazione=="benzina")
+//             return true;
+//         return false;
+//     });
+//     let mADiesel= automobili.filter((Macchina)=>{
+//         if(Macchina.alimentazione=="diesel")
+//             return true;
+//         return false;
+//     })
+//     let ilresto= automobili.filter((Macchina)=>{
+//         if(Macchina.alimentazione=="diesel"||Macchina.alimentazione=="benzina")
+//             return false;
+//         return true;
+//     })
+
+// console.log(mABenzina);
+// console.log(mADiesel);
+// console.log(ilresto);
+
+
+
+
+/**
+ * 
+    A partire da un array di stringhe, crea un secondo array formattando le stringhe del primo array in minuscolo e con l'iniziale maiuscola.
+
+    Es: ['pippo', 'PLUTO', 'Paperino'] => ['Pippo', 'Pluto', 'Paperino']
+
+ * 
+ */
+
+
+    const Stringhe=['pippo', 'PLUTO', 'Paperino'];
+    const stringheFormattati= Stringhe.map((parola)=>{
+        return parola.charAt(0).toUpperCase()+parola.substring(1).toLowerCase();
     })
-    let ilresto= automobili.filter((Macchina)=>{
-        if(Macchina.alimentazione=="diesel"||Macchina.alimentazione=="benzina")
-            return false;
-        return true;
-    })
-
-console.log(mABenzina);
-console.log(mADiesel);
-console.log(ilresto);
+    console.table(Stringhe);
+    console.table(stringheFormattati);
